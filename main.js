@@ -34,6 +34,8 @@ if(process.platform == WINDOWS){
   
   //process.env.R_HOME = macAbsolutePath
   execPath = path.join(app.getAppPath(), "R-Portable-Mac", "bin", "R" )
+}else if (process.platform == 'linux') {
+    execPath = "Rscript"
 } else {
   console.log("not on windows or macos?")
   throw new Error("not on windows or macos?")
